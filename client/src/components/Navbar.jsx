@@ -23,16 +23,16 @@ export default function Navbar() {
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/" onClick={handleShowNavbar}>Inicio</NavLink>
             </li>
             <li>
-              <NavLink to="/saved_recipes">My Recipes</NavLink>
+              <NavLink to="/saved_recipes" onClick={handleShowNavbar}>Mis recetas</NavLink>
             </li>
             <li>
-              <NavLink to="/create_recipes">Create a Recipe</NavLink>
+              <NavLink to="/create_recipes" onClick={handleShowNavbar}>Crear una receta</NavLink>
             </li>
             <li>
-              <NavLink to="/auth">Register/LogIn</NavLink>
+              <NavLink to="/auth" onClick={handleShowNavbar}>Registro/LogIn</NavLink>
             </li>
           </ul>
         </div>
