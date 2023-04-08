@@ -32,7 +32,10 @@ export default function Navbar() {
               <NavLink to="/create_recipes" onClick={handleShowNavbar}>Crear una receta</NavLink>
             </li>
             <li>
-              <NavLink to="/auth" onClick={handleShowNavbar}>Registro/LogIn</NavLink>
+              <NavLink to="/login" onClick={handleShowNavbar}>LogIn</NavLink>
+            </li>
+            <li>
+              <NavLink to="/register" onClick={handleShowNavbar}>Registro</NavLink>
             </li>
           </ul>
         </div>
