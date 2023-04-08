@@ -106,3 +106,15 @@ body {
     margin-top: 22px;
   }
 }
+
+
+button {
+  background-color: #ff4b4b;
+  border:none;
+  border-radius: 5px;
+
+}
+
+button:hover {
+  transform: scale(1.01);
+}
