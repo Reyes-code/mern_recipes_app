@@ -20,6 +20,7 @@ export default function Register() {
       navigate("/login")
     } catch (err) {
       console.error(err);
+        alert("Este usuario ya existe, intenta con un nuevo")
     }
   }
 

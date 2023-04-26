@@ -5,14 +5,13 @@ import { FaHamburger } from "react-icons/fa";
 /* import {GiCookingPot} from 'react-icons/gi' */
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
 export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(false);
   const [cookies, setCookies] = useCookies(["access_token"]);
   const navigate = useNavigate();
-
   const logout = () => {
     setCookies("access_token", "");
     window.localStorage.clear();
@@ -57,9 +56,9 @@ export default function Navbar() {
             ) : (
               <li>
                 <button>
-                <NavLink to="/login" onClick={logout}>
-                  Cerrar sesion
-                </NavLink>
+                  <NavLink to="/login" onClick={logout}>
+                    Cerrar sesion
+                  </NavLink>
                 </button>
               </li>
             )}

@@ -16,12 +16,13 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  z-index: 1;
 }
 
 .navbar {
   height: 60px;
-  background-color: #16181d;
-  position: relative;
+  background-color: #000000;
+  position: relative fixed;;
 }
 
 .logo {

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from "react";
+
 
 export default function SavedRecipes() {
   return (
-    <div>Saved Recipes</div>
-  )
+    <div></div>
+  );
 }

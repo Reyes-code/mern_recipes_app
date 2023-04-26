@@ -52,6 +52,7 @@ export default function Login() {
           <label htmlFor="password">Contraseña</label>
         </div>
         <button type="submit">Ingresar</button>
+        
       </form>
     </div>
   );

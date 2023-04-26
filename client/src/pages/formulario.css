@@ -1,0 +1,26 @@
+.formulario-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+  
+  button {
+    margin-left: 5
+  }
