@@ -2,49 +2,67 @@ import React, { useState } from "react";
 import "./createrecipes.css";
 import axios from "axios";
 import { GrAddCircle } from 'react-icons/gr';
+import { useGetUserID } from "../hooks/useGetUserID";
+import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
-export default function CreatedRecipes() {
+export default function CreateRecipes() {
+
+  const userID = useGetUserID();
+  const [cookies, _] = useCookies(["access_token"]);
   const [recipe, setRecipe] = useState({
     name: "",
+    description: "",
     ingredients: [],
     instructions: "",
+    imageUrl: "",
     cookingTime: 0,
-    userOwner: 0,
+    userOwner: userID,
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setRecipe({ ...recipe, [name]: value });
   };
 
-  const handleIngredientChange = (event, idx) => {
+  const handleIngredientChange = (event, index) => {
     const { value } = event.target;
-    const ingredients = recipe.ingredients;
-    ingredients[idx] = value;
+    const ingredients = [...recipe.ingredients];
+    ingredients[index] = value;
     setRecipe({ ...recipe, ingredients });
   };
 
-  const addIngredient = () => {
-    setRecipe({ ...recipe, ingredients: [...recipe.ingredients, ""] });
+  const handleAddIngredient = () => {
+    const ingredients = [...recipe.ingredients, ""];
+    setRecipe({ ...recipe, ingredients });
   };
 
-  const onSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/recipes", recipe)
-      alert("Receta creada")
-    }catch(err) {
-      console.log(err)
-    }
+      await axios.post(
+        "http://localhost:3001/recipes",
+        { ...recipe },
+        {
+          headers: { authorization: cookies.access_token },
+        }
+      );
 
-  }
+      alert("Recipe Created");
+      navigate("/");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   console.log(recipe);
   return (
     <div className="create-recipe-parent">
       <div className="create-recipe">
         <h2>Crea tu receta</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="name">Nombre</label>
           <input type="text" name="name" id="name" className="text" onChange={handleChange} />
 
@@ -76,7 +94,7 @@ export default function CreatedRecipes() {
               onChange={(event) => handleIngredientChange(event, idx)}
             />
           ))}
-          <button onClick={addIngredient} type="button" className="add">
+          <button onClick={handleAddIngredient} type="button" className="add">
             <GrAddCircle size={20}/>
           </button>
 
@@ -89,7 +107,7 @@ export default function CreatedRecipes() {
             onChange={handleChange}
           ></textarea>
 
-          <button type="submit" className="create" onClick={onSubmit}>
+          <button type="submit" className="create">
             Create Recipe
           </button>
         </form>
