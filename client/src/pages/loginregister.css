@@ -5,7 +5,7 @@
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: #fff5f5;
+  background: #ffffff;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 5px;
@@ -38,12 +38,14 @@
 
 .login-box .user-box input:-webkit-autofill {
   width: 100%;
-  padding: 2px 2px 2px 2px;
+  padding: 10px 0;
   font-size: 16px;
-  color: #00ffc8 !important;
+  color: #000000;
   margin-bottom: 30px;
-  margin-top: 20px;
   border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  background: transparent;
   border-radius: 0px;
 }
 
