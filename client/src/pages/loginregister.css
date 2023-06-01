@@ -71,8 +71,7 @@
 .login-box form button {
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
-  color: #f8a13e;
+  padding: 10px 20px; 
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;

@@ -58,9 +58,12 @@ const FormularioReceta = () => {
     setCategoria("postre");
     setPasos([""]);
   };
+
   return (
-    <div className="createrecipe">
+    <div className="create-box">
+    <h2>Crea tu receta</h2>
     <form className="formulario-receta" onSubmit={handleSubmit}>
+      
       <label htmlFor="nombre">Nombre de la receta:</label>
       <input
         type="text"
@@ -122,8 +125,8 @@ const FormularioReceta = () => {
         onChange={(event) => handleInputChange(event, null, "categoria")}
         required
       >
-        <option value="postre">Postre</option>
-        <option value="entrada">Entrada</option>
+        <option value="postre">Entrada</option>
+        <option value="entrada">Postre</option>
         <option value="plato-fuerte">Plato Fuerte</option>
         <option value="bebida">Bebida</option>
       </select>
@@ -163,6 +166,7 @@ const FormularioReceta = () => {
     </form>
     </div>
   );
-          }
-          
+          }  
+
+
 export default FormularioReceta
