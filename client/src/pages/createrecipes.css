@@ -24,11 +24,12 @@
   color: #000000;
   text-align: center;
   font-family: kanit;
+  font-weight: bolder;
 }
 
 .create-recipe form label {
   width: 300px;
-
+  font-weight:bold;
   display: inline-block;
   margin-bottom: 1px;
   margin-top: 5px;
