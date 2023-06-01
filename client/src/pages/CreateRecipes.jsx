@@ -108,7 +108,7 @@ export default function CreateRecipes() {
           ></textarea>
 
           <button type="submit" className="create">
-            Create Recipe
+             Create Recipe
           </button>
         </form>
       </div>

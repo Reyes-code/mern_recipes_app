@@ -8,7 +8,10 @@ body {
   font-family: sans-serif;
   background-color: #11161a;
   font-family: Kanit;
-
   color: azure;
+  height:100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;
 }
 

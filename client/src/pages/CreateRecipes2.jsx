@@ -125,8 +125,13 @@ const FormularioReceta = () => {
         onChange={(event) => handleInputChange(event, null, "categoria")}
         required
       >
+<<<<<<< HEAD
         <option value="postre">Entrada</option>
         <option value="entrada">Postre</option>
+=======
+        <option value="postre">Postre</option>
+        <option value="entrada">Entrada</option>
+>>>>>>> 49f53ade2b8036981d58d69aafc1e61e861431a4
         <option value="plato-fuerte">Plato Fuerte</option>
         <option value="bebida">Bebida</option>
       </select>
@@ -166,7 +171,12 @@ const FormularioReceta = () => {
     </form>
     </div>
   );
+<<<<<<< HEAD
           }  
 
 
+=======
+          }
+          
+>>>>>>> 49f53ade2b8036981d58d69aafc1e61e861431a4
 export default FormularioReceta

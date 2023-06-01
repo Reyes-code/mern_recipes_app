@@ -1,21 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
 .create-recipe-parent {
-  margin-top: 10px;
+  margin-top: 500px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .create-recipe {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  width: 350px;
-  padding: 16px;
-  border-radius: 10px;
-  margin: auto;
-  background-color: #ffffff;
-  color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #fff5f5;
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgb(0, 0, 0);
-  z-index: -2;
-  font-family: kanit;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  z-index: -1;
 }
 
 .create-recipe h2 {

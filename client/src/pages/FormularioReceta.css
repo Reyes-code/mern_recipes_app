@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .create-box {
     position: absolute;
     top: 53%;
@@ -25,11 +26,28 @@
     overflow-y: auto;
     padding: 25px;
     border-radius: 10px;
+=======
+.createrecipe{
+    position: relative;
+
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.formulario-receta {
+    margin-top: 500px;
+    margin-bottom: 10px;
+    width: 350px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+>>>>>>> 49f53ade2b8036981d58d69aafc1e61e861431a4
     background-color: #ffffff;
     color: #000000;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgb(0, 0, 0);
     z-index: -2;
+<<<<<<< HEAD
     font-family: kanit;
   }
   
@@ -61,6 +79,13 @@
   /* Resto de estilos... */
   .formulario-receta label {
     padding-left: 10px;
+=======
+    font-family: Kanit;
+  }
+  
+  .formulario-receta label {
+    font-weight: bold;
+>>>>>>> 49f53ade2b8036981d58d69aafc1e61e861431a4
   }
   
   .formulario-receta input,
@@ -68,11 +93,17 @@
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
+<<<<<<< HEAD
     border: 1px solid #525252;
     background-color: #f8f8f8;
     border-radius: 100px;
     box-sizing: border-box;
     padding-left: 12px;
+=======
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+>>>>>>> 49f53ade2b8036981d58d69aafc1e61e861431a4
   }
   
   .formulario-receta .input-container {
@@ -105,8 +136,13 @@
   .formulario-receta button[type="submit"] {
     margin-top: 10px;
     padding: 10px 20px;
+<<<<<<< HEAD
     background-color: #f3cf6d;
     color: rgb(0, 0, 0);
+=======
+    background-color: #4caf50;
+    color: white;
+>>>>>>> 49f53ade2b8036981d58d69aafc1e61e861431a4
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -114,4 +150,9 @@
   
   .formulario-receta button[type="submit"]:hover {
     background-color: #45a049;
+<<<<<<< HEAD
   }  
+=======
+  }
+  
+>>>>>>> 49f53ade2b8036981d58d69aafc1e61e861431a4
