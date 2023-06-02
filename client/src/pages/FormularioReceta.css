@@ -5,15 +5,13 @@
     width: 800px;
     padding: 10px;
     transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
     z-index: 0;
+    background-color: transparent;
   }
 
   .create-box h2 {
-    margin: 0 0px 10 px;
-    padding: 0;
+    margin: 0 0px 10px;
+    padding: 2px;
     color: #ffffff;
     text-align: center;
     font-weight: bolder;
@@ -25,8 +23,8 @@
     overflow-y: auto;
     padding: 25px;
     border-radius: 10px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #0c0c0c;
+    color: #ffffff;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgb(0, 0, 0);
     z-index: -2;
