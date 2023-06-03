@@ -15,12 +15,32 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const recipe = new RecipeModel(req.body);
+  const recipe = new RecipeModel({
+    _id: new mongoose.Types.ObjectId(),
+    name: req.body.name,
+    imageUrl: req.body.imageUrl,
+    description: req.body.description,
+    ingredients: req.body.ingredients,
+    category: req.body.category,
+    steps: req.body.steps,
+    userOwner: req.body.userOwner, // Agregar el propietario del usuario al campo userOwner
+  });
+
   try {
-    const response = await recipe.save();
-    res.json({ message: "Recipe registered successfully" });
+    const result = await recipe.save();
+    res.status(201).json({
+      createdRecipe: {
+        name: result.name,
+        imageUrl: result.imageUrl,
+        description: result.description,
+        ingredients: result.ingredients,
+        category: result.category,
+        steps: result.steps,
+        userOwner: result.userOwner // Asegurarse de incluir el propietario del usuario en la respuesta
+      },
+    });
   } catch (err) {
-    res.json(err);
+    res.status(500).json(err);
   }
 });
 
@@ -46,15 +66,15 @@ router.get("/SavedRecipes/ids", async (req, res) => {
 });
 
 router.get("/SavedRecipes", async (req, res) => {
-    try {
-      const user = await UserModel.findById(req.body.userID);
-      const savedRecipes = await RecipeModel.find({
-        _id: {$in: user.savedRecipes}
-      })
-      res.json({ savedRecipes });
-    } catch (err) {
-      res.json(err);
-    }
-  });
+  try {
+    const user = await UserModel.findById(req.body.userID);
+    const savedRecipes = await RecipeModel.find({
+      _id: { $in: user.savedRecipes },
+    });
+    res.json({ savedRecipes });
+  } catch (err) {
+    res.json(err);
+  }
+});
 
 export { router as recipesRouter };
