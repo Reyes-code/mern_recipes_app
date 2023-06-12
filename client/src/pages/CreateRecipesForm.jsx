@@ -156,10 +156,10 @@ export default function CreateRecipesForm() {
               onChange={(event) => handleInputChange(event, null, "category")}
               required
             >
-              <option value="postre">Postre</option>
-              <option value="entrada">Entrada</option>
-              <option value="plato-fuerte">Plato Fuerte</option>
-              <option value="bebida">Bebida</option>
+              <option value="Postre">Postre</option>
+              <option value="Entrada">Entrada</option>
+              <option value="Plato Fuerte">Plato Fuerte</option>
+              <option value="Bebida">Bebida</option>
             </select>
 
             <label htmlFor="ingredients">Ingredientes:</label>

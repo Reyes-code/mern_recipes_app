@@ -6,6 +6,8 @@ import {userRouter} from './routes/users.js'
 import { recipesRouter } from './routes/recipes.js'
 
 const app = express()
+const port = 3001;
+/* const ipAddress = '192.168.10.24'; try in another device */
 
 app.use(express.json())
 app.use(cors())
@@ -18,7 +20,12 @@ app.use("/recipes",recipesRouter)
   { useNewUrlParser: true, useUnifiedTopology: true }
 ).then(() => {
   console.log('Database connection successful!');
-  app.listen(3001, () => console.log('Server started on port 3001'));
+/*   app.listen(port, ipAddress, () => {
+    console.log(`Server started on ${ipAddress}:${port}`);
+  }); */
+  app.listen(port, () => {
+    console.log(`Server started on ${port}`);
+  });
 }).catch((error) => {
   console.error('Error connecting to database:', error.message);
 })
