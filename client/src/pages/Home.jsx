@@ -8,8 +8,8 @@ export default function Home() {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/recipes");
-        /* const response = await axios.get("http://192.168.10.24:3001/recipes"); Try in another device */
+        /* const response = await axios.get("http://localhost:3001/recipes"); */
+        const response = await axios.get("http://192.168.10.24:3001/recipes"); /* Try in another device */
         setRecipes(response.data);
         console.log(response.data);
       } catch (err) {
@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
 <div className="recipe-container">
-  <h2>Recipes</h2>
+  <h2>Mis Recetas</h2>
   <div className="card-container">
     {recipes.map((recipe) => (
       <div key={recipe._id} className="card">
