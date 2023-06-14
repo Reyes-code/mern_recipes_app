@@ -13,7 +13,7 @@ export default function Register() {
   const onSubmit = async(event) => {
     event.preventDefault();
     try {
-      await axios.post("http://192.168.10.24:3001/auth/register",{
+      await axios.post("http://192.168.10.22:3001/auth/register",{
         username, password
       })
       alert("El registro fue exitoso, Inicia sesión");

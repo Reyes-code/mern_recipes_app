@@ -22,7 +22,10 @@ body {
 .navbar {
   height: 60px;
   background-color: #000000;
-  position: relative fixed;;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
 }
 
 .logo {
@@ -34,8 +37,6 @@ body {
   display: none;
 }
 
-.nav-elements {
-}
 
 .nav-elements ul {
   display: flex;

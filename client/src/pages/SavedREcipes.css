@@ -9,17 +9,19 @@
 }
 
 .card {
-  width: 300px;
+  width: 320px;
   border: 1px solid #000000;
   border-radius: 20px;
   margin: 10px;
   padding: 10px;
-  height: 280px;
+  height: 290px;
   background-color:#000a0e;
 }
 
 .card:hover{
-  scale: 1.03;
+  transform: scale(1.05); 
+  transition: all 0.5s;
+  filter: brightness(1.09);
 }
 
 .card-image {
