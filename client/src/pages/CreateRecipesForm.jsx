@@ -242,7 +242,7 @@ export default function CreateRecipesForm() {
             <button type="button" onClick={retrocederPagina} className="page">
             <GrFormPrevious/>
             </button>
-            <button type="submit">Guardar Receta</button>
+            <button type="submit">Crear Receta</button>
           </>
         );
 
