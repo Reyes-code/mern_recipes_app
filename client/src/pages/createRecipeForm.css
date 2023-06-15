@@ -7,29 +7,42 @@
     transform: translate(-50%, -50%);
     z-index: 0;
     background-color: transparent;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+/* 
+    position: relative; */
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   }
 
   .create-box h2 {
-    margin: 0 0px 10px;
+    margin: 0 0 20px;
     padding: 2px;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     font-weight: bolder;
+    font-family: inherit;
+    font-weight: 500;
   }
   
   .create-box .formulario-receta {
-    width: 100%;
-    max-height: 530px; /* Ajusta la altura máxima según tus necesidades */  
+    padding: 25px;
+    background-color: #ffffff;
+    color: #000000;
+    max-height: 530px; 
     overflow-y: auto;
     padding: 25px;
-    border-radius: 10px;
-    background-color: #0c0c0c;
-    color: #ffffff;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgb(0, 0, 0);
-    z-index: -2;
-    font-family: kanit;
   }
+
+  .create-box .formulario-receta label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000000;
+  }
+  
   
   @media (max-width: 768px) {
     .create-box {
@@ -64,13 +77,12 @@
   .formulario-receta input,
   .formulario-receta select {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #525252;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #d3d3d3;
     background-color: #f8f8f8;
-    border-radius: 100px;
+    border-radius: 4px;
     box-sizing: border-box;
-    padding-left: 12px;
   }
   
   .formulario-receta .input-container {
@@ -81,33 +93,70 @@
   .formulario-receta .agregar-ingrediente,
   .formulario-receta .agregar-paso {
     margin-left: 10px;
-    padding: 5px 10px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
     background-color: #4caf50;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
   }
   
   .formulario-receta .eliminar-ingrediente,
   .formulario-receta .eliminar-paso {
     margin-left: 10px;
-    padding: 5px 10px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
     background-color: #f44336;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
+  }
+
+  .page{
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px; 
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    background-color: #ffffff;
+    border-color: #000000;
+    border-radius: 5px;
+    border: none; 
+    border-color: #000000;
+    color: #000000;
+    box-shadow: 0 0 40px 40px #3eb4f8 inset, 0 0 0 0 #f8a13e;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    margin-right: 10px;
   }
   
   .formulario-receta button[type="submit"] {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px; 
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
     margin-top: 10px;
-    padding: 10px 30px;
-    background-color: #f3cf6d;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: #ffffff;
+    border-color: #000000;
+    border-radius: 5px;
+    border: none; 
+    border-color: #000000;
+    color: #000000;
+    box-shadow: 0 0 40px 40px #f8a13e inset, 0 0 0 0 #f8a13e;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
   }
   
   .formulario-receta button[type="submit"]:hover {

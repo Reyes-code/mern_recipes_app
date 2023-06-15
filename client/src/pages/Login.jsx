@@ -6,7 +6,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const [_, setCookies] = useCookies(["access_token"]);
+  const [ setCookies] = useCookies(["access_token"]);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

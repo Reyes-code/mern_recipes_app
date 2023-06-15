@@ -4,6 +4,7 @@ import axios from "axios";
 import { useGetUserID } from "../hooks/useGetUserID";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 
 export default function CreateRecipesForm() {
   const userID = useGetUserID();
@@ -139,8 +140,8 @@ export default function CreateRecipesForm() {
               required
             />
 
-            <button type="button" onClick={avanzarPagina}>
-              Avanzar
+            <button type="button" className="page" onClick={avanzarPagina}>
+            <GrFormNext/>
             </button>
           </>
         );
@@ -195,11 +196,11 @@ export default function CreateRecipesForm() {
               </div>
             ))}
 
-            <button type="button" onClick={retrocederPagina}>
-              Retroceder
+            <button type="button" onClick={retrocederPagina} className="page">
+            <GrFormPrevious/>
             </button>
-            <button type="button" onClick={avanzarPagina}>
-              Avanzar
+            <button type="button" onClick={avanzarPagina} className="page">
+            <GrFormNext/>
             </button>
           </>
         );
@@ -238,8 +239,8 @@ export default function CreateRecipesForm() {
               </div>
             ))}
 
-            <button type="button" onClick={retrocederPagina}>
-              Retroceder
+            <button type="button" onClick={retrocederPagina} className="page">
+            <GrFormPrevious/>
             </button>
             <button type="submit">Guardar Receta</button>
           </>
