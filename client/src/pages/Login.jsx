@@ -6,7 +6,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const [ setCookies] = useCookies(["access_token"]);
+  const [_,setCookies] = useCookies(["access_token"]);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +17,7 @@ export default function Login() {
     event.preventDefault();
 
     try {
-      const result = await axios.post("http://192.168.10.22:3001/auth/login", {
+      const result = await axios.post("http://192.168.10.44:3001/auth/login", {
         username,
         password,
       });
