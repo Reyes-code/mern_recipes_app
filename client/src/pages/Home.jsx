@@ -9,7 +9,7 @@ export default function Home() {
     const fetchRecipe = async () => {
       try {
         /* const response = await axios.get("http://localhost:3001/recipes"); */
-        const response = await axios.get("http://192.168.10.44:3001/recipes"); /* Try in another device */
+        const response = await axios.get("http://192.168.199.1:3001/recipes"); /* Try in another device */
         setRecipes(response.data);
         console.log(response.data);
       } catch (err) {

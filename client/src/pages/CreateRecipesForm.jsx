@@ -20,21 +20,21 @@ export default function CreateRecipesForm() {
 
   const navigate = useNavigate();
 
-  const agregarIngrediente = () => {
+  const addIngredient = () => {
     setIngredients([...ingredients, ""]);
   };
 
-  const eliminarIngrediente = (index) => {
-    const nuevosIngredientes = [...ingredients];
-    nuevosIngredientes.splice(index, 1);
-    setIngredients(nuevosIngredientes);
+  const deleteIngredient = (index) => {
+    const newIngredients = [...ingredients];
+    newIngredients.splice(index, 1);
+    setIngredients(newIngredients);
   };
 
-  const agregarPaso = () => {
+  const addStep = () => {
     setSteps([...steps, ""]);
   };
 
-  const eliminarPaso = (index) => {
+  const deleteStep = (index) => {
     const nuevosPasos = [...steps];
     nuevosPasos.splice(index, 1);
     setSteps(nuevosPasos);
@@ -42,9 +42,9 @@ export default function CreateRecipesForm() {
 
   const handleInputChange = (event, index, type) => {
     if (type === "ingredients") {
-      const nuevosIngredientes = [...ingredients];
-      nuevosIngredientes[index] = event.target.value;
-      setIngredients(nuevosIngredientes);
+      const newIngredients = [...ingredients];
+      newIngredients[index] = event.target.value;
+      setIngredients(newIngredients);
     } else if (type === "steps") {
       const nuevosPasos = [...steps];
       nuevosPasos[index] = event.target.value;
@@ -65,7 +65,7 @@ export default function CreateRecipesForm() {
     event.preventDefault();
     try {
       await axios.post(
-        "http://192.168.10.44:3001/recipes",
+        "http://192.168.199.1:3001/recipes",
         {
           name,
           imageUrl,
@@ -179,7 +179,7 @@ export default function CreateRecipesForm() {
                   <button
                     className="agregar-ingrediente"
                     type="button"
-                    onClick={agregarIngrediente}
+                    onClick={addIngredient}
                   >
                     +
                   </button>
@@ -188,7 +188,7 @@ export default function CreateRecipesForm() {
                   <button
                     className="eliminar-ingrediente"
                     type="button"
-                    onClick={() => eliminarIngrediente(index)}
+                    onClick={() => deleteIngredient(index)}
                   >
                     -
                   </button>
@@ -222,7 +222,7 @@ export default function CreateRecipesForm() {
                   <button
                     className="agregar-paso"
                     type="button"
-                    onClick={agregarPaso}
+                    onClick={addStep}
                   >
                     +
                   </button>
@@ -231,7 +231,7 @@ export default function CreateRecipesForm() {
                   <button
                     className="eliminar-paso"
                     type="button"
-                    onClick={() => eliminarPaso(index)}
+                    onClick={() => deleteStep(index)}
                   >
                     -
                   </button>
