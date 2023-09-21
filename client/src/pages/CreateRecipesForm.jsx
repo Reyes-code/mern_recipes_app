@@ -65,7 +65,7 @@ export default function CreateRecipesForm() {
     event.preventDefault();
     try {
       await axios.post(
-        "http://192.168.199.1:3001/recipes",
+        "http://192.168.20.68:3001/recipes",
         {
           name,
           imageUrl,
