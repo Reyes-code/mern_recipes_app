@@ -7,7 +7,7 @@ import { recipesRouter } from './routes/recipes.js'
 
 const app = express()
 const port = 3001;
-const ipAddress = '192.168.10.44'; /* try in another device */
+const ipAddress = '192.168.20.68'; /* try in another device */
 
 app.use(express.json())
 app.use(cors())
